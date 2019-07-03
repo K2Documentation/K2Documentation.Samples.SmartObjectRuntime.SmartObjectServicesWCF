@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Process_Instance">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProcessSetID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ProcessInstanceID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ProcessName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Folder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Folio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FinishDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Originator" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Duration" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Priority" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IncludeDeletedStatus" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ViewFlow" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Process_Instance" nillable="true" type="tns:Process_Instance" />
+  <xs:complexType name="ArrayOfProcess_Instance">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Process_Instance" nillable="true" type="tns:Process_Instance" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProcess_Instance" nillable="true" type="tns:ArrayOfProcess_Instance" />
+  <xs:complexType name="Activity_Instance">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProcessInstanceID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ActivityInstanceID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ActivityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FinishDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Priority" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpectedDuration" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Duration" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Activity_Instance" nillable="true" type="tns:Activity_Instance" />
+  <xs:complexType name="ArrayOfActivity_Instance">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Activity_Instance" nillable="true" type="tns:Activity_Instance" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActivity_Instance" nillable="true" type="tns:ArrayOfActivity_Instance" />
+  <xs:complexType name="Event_Instance">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProcessInstanceID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ActivityInstanceID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="EventName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FinishDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Priority" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Duration" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ActivityName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Event_Instance" nillable="true" type="tns:Event_Instance" />
+  <xs:complexType name="ArrayOfEvent_Instance">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Event_Instance" nillable="true" type="tns:Event_Instance" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEvent_Instance" nillable="true" type="tns:ArrayOfEvent_Instance" />
+  <xs:complexType name="Process_Overview">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProcessSetID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ProcessName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Folder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberOfInstances" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="AverageDuration" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="IncludeDeletedStatus" nillable="true" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Process_Overview" nillable="true" type="tns:Process_Overview" />
+  <xs:complexType name="ArrayOfProcess_Overview">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Process_Overview" nillable="true" type="tns:Process_Overview" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProcess_Overview" nillable="true" type="tns:ArrayOfProcess_Overview" />
+  <xs:complexType name="Activity_Data">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActivityInstanceDestinationID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ActivityInstanceID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ProcessInstanceID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Activity_Data" nillable="true" type="tns:Activity_Data" />
+  <xs:complexType name="ArrayOfActivity_Data">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Activity_Data" nillable="true" type="tns:Activity_Data" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActivity_Data" nillable="true" type="tns:ArrayOfActivity_Data" />
+  <xs:complexType name="Process_Data">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProcessName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProcessInstanceID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="DataName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Process_Data" nillable="true" type="tns:Process_Data" />
+  <xs:complexType name="ArrayOfProcess_Data">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Process_Data" nillable="true" type="tns:Process_Data" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProcess_Data" nillable="true" type="tns:ArrayOfProcess_Data" />
+  <xs:complexType name="Process_Definition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProcessSetID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ProcessID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Priority" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpectedDuration" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="LogLevel" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="BusinessOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TechnicalOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ChangeDate" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Process_Definition" nillable="true" type="tns:Process_Definition" />
+  <xs:complexType name="ArrayOfProcess_Definition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Process_Definition" nillable="true" type="tns:Process_Definition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProcess_Definition" nillable="true" type="tns:ArrayOfProcess_Definition" />
+  <xs:complexType name="Process_XML">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProcessName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProcessInstanceID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="XMLName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XMLValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Process_XML" nillable="true" type="tns:Process_XML" />
+  <xs:complexType name="ArrayOfProcess_XML">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Process_XML" nillable="true" type="tns:Process_XML" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProcess_XML" nillable="true" type="tns:ArrayOfProcess_XML" />
+  <xs:complexType name="Activity_XML">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActivityInstanceDestinationID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ActivityInstanceID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ProcessInstanceID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XMLName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XMLValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Activity_XML" nillable="true" type="tns:Activity_XML" />
+  <xs:complexType name="ArrayOfActivity_XML">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Activity_XML" nillable="true" type="tns:Activity_XML" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActivity_XML" nillable="true" type="tns:ArrayOfActivity_XML" />
+  <xs:complexType name="Activity_Slot_Data">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActivityInstanceSlotID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ActivityInstanceID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ProcessInstanceID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Activity_Slot_Data" nillable="true" type="tns:Activity_Slot_Data" />
+  <xs:complexType name="ArrayOfActivity_Slot_Data">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Activity_Slot_Data" nillable="true" type="tns:Activity_Slot_Data" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActivity_Slot_Data" nillable="true" type="tns:ArrayOfActivity_Slot_Data" />
+  <xs:complexType name="Activity_Slot_XML">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActivityInstanceSlotID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ActivityInstanceID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ProcessInstanceID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XMLName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XMLValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Activity_Slot_XML" nillable="true" type="tns:Activity_Slot_XML" />
+  <xs:complexType name="ArrayOfActivity_Slot_XML">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Activity_Slot_XML" nillable="true" type="tns:Activity_Slot_XML" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActivity_Slot_XML" nillable="true" type="tns:ArrayOfActivity_Slot_XML" />
+  <xs:complexType name="Activity_Instance_Destination">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActivityInstanceDestinationID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ActivityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ActivityInstanceID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ProcessInstanceID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FinishDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Duration" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ProcessName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProcessFolder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Folio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpectedDuration" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ActivityID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Final_Action" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Activity_Instance_Destination" nillable="true" type="tns:Activity_Instance_Destination" />
+  <xs:complexType name="ArrayOfActivity_Instance_Destination">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Activity_Instance_Destination" nillable="true" type="tns:Activity_Instance_Destination" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActivity_Instance_Destination" nillable="true" type="tns:ArrayOfActivity_Instance_Destination" />
+</xs:schema>

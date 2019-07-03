@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://k2.denallix.com:8888/SmartObjectServices/wcf/Workflow Reports/Workflow General?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+  <xs:element name="Process_InstanceSvc_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="dataContract" nillable="true" type="q1:Process_Instance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Process_InstanceSvc_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Process_InstanceSvc_ListResult" nillable="true" type="q2:ArrayOfProcess_Instance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Process_InstanceSvc_List_Filtered">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Process_InstanceSvc_List_FilteredResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Process_InstanceSvc_List_FilteredResult" nillable="true" type="q3:ArrayOfProcess_Instance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Activity_InstanceSvc_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="dataContract" nillable="true" type="q4:Activity_Instance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Activity_InstanceSvc_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Activity_InstanceSvc_ListResult" nillable="true" type="q5:ArrayOfActivity_Instance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Activity_InstanceSvc_List_Filtered">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Activity_InstanceSvc_List_FilteredResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Activity_InstanceSvc_List_FilteredResult" nillable="true" type="q6:ArrayOfActivity_Instance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Event_InstanceSvc_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="dataContract" nillable="true" type="q7:Event_Instance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Event_InstanceSvc_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Event_InstanceSvc_ListResult" nillable="true" type="q8:ArrayOfEvent_Instance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Event_InstanceSvc_List_Filtered">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Event_InstanceSvc_List_FilteredResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Event_InstanceSvc_List_FilteredResult" nillable="true" type="q9:ArrayOfEvent_Instance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Process_OverviewSvc_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="dataContract" nillable="true" type="q10:Process_Overview" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Process_OverviewSvc_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Process_OverviewSvc_ListResult" nillable="true" type="q11:ArrayOfProcess_Overview" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Process_OverviewSvc_List_Filtered">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Process_OverviewSvc_List_FilteredResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Process_OverviewSvc_List_FilteredResult" nillable="true" type="q12:ArrayOfProcess_Overview" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Activity_DataSvc_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="dataContract" nillable="true" type="q13:Activity_Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Activity_DataSvc_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Activity_DataSvc_ListResult" nillable="true" type="q14:ArrayOfActivity_Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Activity_DataSvc_List_Filtered">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Activity_DataSvc_List_FilteredResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Activity_DataSvc_List_FilteredResult" nillable="true" type="q15:ArrayOfActivity_Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Process_DataSvc_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="dataContract" nillable="true" type="q16:Process_Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Process_DataSvc_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Process_DataSvc_ListResult" nillable="true" type="q17:ArrayOfProcess_Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Process_DataSvc_List_Filtered">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Process_DataSvc_List_FilteredResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Process_DataSvc_List_FilteredResult" nillable="true" type="q18:ArrayOfProcess_Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Process_DefinitionSvc_ListProcessDefinitions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="dataContract" nillable="true" type="q19:Process_Definition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Process_DefinitionSvc_ListProcessDefinitionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Process_DefinitionSvc_ListProcessDefinitionsResult" nillable="true" type="q20:ArrayOfProcess_Definition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Process_DefinitionSvc_ListProcessDefinitions_Filtered">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Process_DefinitionSvc_ListProcessDefinitions_FilteredResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Process_DefinitionSvc_ListProcessDefinitions_FilteredResult" nillable="true" type="q21:ArrayOfProcess_Definition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Process_XMLSvc_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="dataContract" nillable="true" type="q22:Process_XML" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Process_XMLSvc_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Process_XMLSvc_ListResult" nillable="true" type="q23:ArrayOfProcess_XML" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Process_XMLSvc_List_Filtered">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Process_XMLSvc_List_FilteredResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Process_XMLSvc_List_FilteredResult" nillable="true" type="q24:ArrayOfProcess_XML" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Activity_XMLSvc_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="dataContract" nillable="true" type="q25:Activity_XML" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Activity_XMLSvc_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Activity_XMLSvc_ListResult" nillable="true" type="q26:ArrayOfActivity_XML" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Activity_XMLSvc_List_Filtered">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Activity_XMLSvc_List_FilteredResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Activity_XMLSvc_List_FilteredResult" nillable="true" type="q27:ArrayOfActivity_XML" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Activity_Slot_DataSvc_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="dataContract" nillable="true" type="q28:Activity_Slot_Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Activity_Slot_DataSvc_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Activity_Slot_DataSvc_ListResult" nillable="true" type="q29:ArrayOfActivity_Slot_Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Activity_Slot_DataSvc_List_Filtered">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Activity_Slot_DataSvc_List_FilteredResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Activity_Slot_DataSvc_List_FilteredResult" nillable="true" type="q30:ArrayOfActivity_Slot_Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Activity_Slot_XMLSvc_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="dataContract" nillable="true" type="q31:Activity_Slot_XML" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Activity_Slot_XMLSvc_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Activity_Slot_XMLSvc_ListResult" nillable="true" type="q32:ArrayOfActivity_Slot_XML" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Activity_Slot_XMLSvc_List_Filtered">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Activity_Slot_XMLSvc_List_FilteredResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Activity_Slot_XMLSvc_List_FilteredResult" nillable="true" type="q33:ArrayOfActivity_Slot_XML" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Activity_Instance_DestinationSvc_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="dataContract" nillable="true" type="q34:Activity_Instance_Destination" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Activity_Instance_DestinationSvc_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Activity_Instance_DestinationSvc_ListResult" nillable="true" type="q35:ArrayOfActivity_Instance_Destination" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Activity_Instance_DestinationSvc_List_Filtered">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Activity_Instance_DestinationSvc_List_FilteredResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Activity_Instance_DestinationSvc_List_FilteredResult" nillable="true" type="q36:ArrayOfActivity_Instance_Destination" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

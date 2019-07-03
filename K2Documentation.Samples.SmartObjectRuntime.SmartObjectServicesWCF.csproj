@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7C77E245-0ACC-4C8B-B952-E9B7F423F4EC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>K2Documentation.Samples.SmartObjectRuntime.SmartObjectServicesWCF</RootNamespace>
+    <AssemblyName>K2Documentation.Samples.SmartObjectRuntime.SmartObjectServicesWCF</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SourceCode.SmartObjects.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\K2Five53 Assemblies\SourceCode.SmartObjects.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\WorkflowGeneralReport_WCFService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\WorkflowGeneralReport_WCFService\K2Documentation.Samples.SmartObjectRuntime.SmartObjectServicesWCF.WorkflowGeneralReport_WCFService.Activity_Data.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowGeneralReport_WCFService\K2Documentation.Samples.SmartObjectRuntime.SmartObjectServicesWCF.WorkflowGeneralReport_WCFService.Activity_Instance.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowGeneralReport_WCFService\K2Documentation.Samples.SmartObjectRuntime.SmartObjectServicesWCF.WorkflowGeneralReport_WCFService.Activity_Instance_Destination.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowGeneralReport_WCFService\K2Documentation.Samples.SmartObjectRuntime.SmartObjectServicesWCF.WorkflowGeneralReport_WCFService.Activity_Slot_Data.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowGeneralReport_WCFService\K2Documentation.Samples.SmartObjectRuntime.SmartObjectServicesWCF.WorkflowGeneralReport_WCFService.Activity_Slot_XML.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowGeneralReport_WCFService\K2Documentation.Samples.SmartObjectRuntime.SmartObjectServicesWCF.WorkflowGeneralReport_WCFService.Activity_XML.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowGeneralReport_WCFService\K2Documentation.Samples.SmartObjectRuntime.SmartObjectServicesWCF.WorkflowGeneralReport_WCFService.Event_Instance.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowGeneralReport_WCFService\K2Documentation.Samples.SmartObjectRuntime.SmartObjectServicesWCF.WorkflowGeneralReport_WCFService.Process_Data.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowGeneralReport_WCFService\K2Documentation.Samples.SmartObjectRuntime.SmartObjectServicesWCF.WorkflowGeneralReport_WCFService.Process_Definition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowGeneralReport_WCFService\K2Documentation.Samples.SmartObjectRuntime.SmartObjectServicesWCF.WorkflowGeneralReport_WCFService.Process_Instance.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowGeneralReport_WCFService\K2Documentation.Samples.SmartObjectRuntime.SmartObjectServicesWCF.WorkflowGeneralReport_WCFService.Process_Overview.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowGeneralReport_WCFService\K2Documentation.Samples.SmartObjectRuntime.SmartObjectServicesWCF.WorkflowGeneralReport_WCFService.Process_XML.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowGeneralReport_WCFService\Workflow General.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowGeneralReport_WCFService\Workflow General1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowGeneralReport_WCFService\Workflow General2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowGeneralReport_WCFService\Workflow_x0020_Reports_Workflow_x0020_GeneralService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WorkflowGeneralReport_WCFService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WorkflowGeneralReport_WCFService\Workflow General.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WorkflowGeneralReport_WCFService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WorkflowGeneralReport_WCFService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WorkflowGeneralReport_WCFService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="References\About References.txt" />
+    <Content Include="References\SourceCode.SmartObjects.Client.dll" />
+    <Content Include="Resources\About Resources.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
